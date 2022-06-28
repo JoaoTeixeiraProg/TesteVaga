@@ -1,0 +1,113 @@
+ //Teste 1
+
+#include <iostream>
+#include <stdlib.h>
+
+
+using namespace std;
+
+
+int main()
+{
+    int indice, soma, k;
+    indice = 13;
+    soma = 0;
+    k = 0;
+
+    for (k; k < indice; k++) {
+        k = k + 1;
+        soma = soma + k;
+        cout << soma << endl;
+    }
+    
+    cout << "Soma final e igual: " << soma;
+}
+
+//Teste 2
+
+#include <iostream>
+
+using namespace std;
+
+
+int fibonacci(int n)
+{
+    if (n == 0 || n == 1)
+        return n;
+    else
+        return fibonacci(n - 2) + fibonacci(n - 1);
+}
+
+int main()
+{
+
+    int i, num;
+    do
+    {
+        cout << "Digite um Numero: ";
+        cin >> num;
+
+    } while (num < 0);
+
+    for (i = 0; i < num + 1; i++)
+    {
+        if (fibonacci(i) != 0);
+    }
+    
+    if (fibonacci(i) == num)
+        cout << "O Numero consta na Fibonacci";
+    else
+        cout << "O Numero nao consta na Fibonacci";
+
+    return 0;
+}
+
+
+//Teste 3 
+
+a) 1, 3, 5, 7, 11; -> Números primos.
+
+b) 2, 4, 8, 16, 32, 64, 128; -> Próximo número é igual número anterior vezes 2.
+
+c) 0, 1, 4, 9, 16, 25, 36,  49; -> Números que conteem raiz quadrada.
+
+d) 4, 16, 36, 64,  100; ->  Os resultados das raizes quadrades desses números são pares.
+
+e) 1, 1, 2, 3, 5, 8,  13 ; -> Seguuencia Fibonacci.
+
+f) 2,10, 12, 16, 17, 18, 19,  200; -> Números que começam com D.
+
+//Teste 5
+
+#include <stdio.h>
+#include <string.h>
+
+char* reverse(char* s)
+{
+    int length = strlen(s);
+    int c, i, j;
+
+    for (i = 0, j = length - 1; i < j; i++, j--)
+    {
+        c = s[i];
+        s[i] = s[j];
+        s[j] = c;
+    }
+
+    return s;
+}
+
+
+int main(void)
+{
+    char str[] = "Ola Mundo!";
+
+    printf("%s\n", reverse(str));
+
+    return 0;
+}
+
+
+
+
+
